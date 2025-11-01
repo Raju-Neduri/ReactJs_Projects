@@ -5,4 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/ReactJs_Projects/01_Gradient_Generator/gradient-generator",
 });

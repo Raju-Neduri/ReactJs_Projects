@@ -202,7 +202,7 @@ function App() {
       {/* --- Grid --- */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         {gradients.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
             {gradients.map((item) => (
               <GradientCard
                 key={item.id}
