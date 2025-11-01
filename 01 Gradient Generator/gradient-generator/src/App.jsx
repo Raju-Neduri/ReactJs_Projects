@@ -17,10 +17,27 @@ function App() {
                 type="text"
                 className="border border-slate-300 bg-white rounded-lg w-[100px] p-2"
                 placeholder="12"
-                onChange={(e) => setNum(Number(e.target.value))}
+                value={num}
+                onChange={(e) => {
+                  const value = e.target.value;
+
+                  // Allow clearing input
+                  if (value === "") {
+                    setNum("");
+                    return;
+                  }
+
+                  // Parse and cap at 1000
+                  const numericValue = Number(value);
+                  if (!isNaN(numericValue)) {
+                    const capped = Math.min(numericValue, 1000);
+                    setNum(capped);
+                  }
+                }}
               />
               <select
                 className="border border-slate-300 bg-white rounded-lg w-[100px] p-2"
+                value={type}
                 onChange={(e) => setType(e.target.value)}
               >
                 <option value="linear">Linear</option>
