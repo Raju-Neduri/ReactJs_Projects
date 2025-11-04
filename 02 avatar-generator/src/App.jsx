@@ -14,11 +14,25 @@ function App() {
   };
 
   const generate = () => {
-    console.log("Raju");
+    const obj = data.find((item) => item.value === option);
+
+    if (option === "male" || option === "female") {
+      const randomnum = Math.floor(Math.random() * 100);
+      const randomSrc = `${obj.url}${randomnum}.jpg`;
+      setSrc(randomSrc);
+      console.log(randomSrc);
+    } else {
+      const random = Date.now();
+      const randomSrc = `${obj.url}${random}.jpg`;
+
+      setSrc(randomSrc);
+      console.log("Generated URL:", randomSrc);
+    }
   };
+
   useEffect(() => {
     generate();
-  }, []);
+  }, [option]);
 
   return (
     <>
@@ -30,6 +44,7 @@ function App() {
           src={src}
           option={option}
           onOptionChange={onOptionChange}
+          generate={generate}
         />
       </div>
     </>
