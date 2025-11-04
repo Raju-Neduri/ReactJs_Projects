@@ -1,7 +1,11 @@
-function AvatarControls({ data }) {
+function AvatarControls({ data, option, onOptionChange }) {
   return (
     <div className="w-full space-y-4">
-      <select className="bg-slate-900/60 w-full p-3 rounded-xl">
+      <select
+        className="bg-slate-900/60 w-full p-3 rounded-xl"
+        value={option}
+        onChange={onOptionChange}
+      >
         {data.map((item, index) => (
           <option value={item.value} key={index}>
             {item.label}
