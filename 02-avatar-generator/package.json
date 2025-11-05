@@ -1,4 +1,5 @@
 {
+  "homepage": "https://raju-neduri.github.io/ReactJs_Projects/02-avatar-generator/",
   "name": "02-avatar-generator",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist -b gh-pages -f"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
