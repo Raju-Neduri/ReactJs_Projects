@@ -3,176 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Projects – Raju Neduri</title>
-    <style>
-      :root {
-        --bg: #f9fafb;
-        --text: #0f172a;
-        --accent1: #6366f1;
-        --accent2: #a855f7;
-        --accent3: #ec4899;
-      }
-
-      body {
-        margin: 0;
-        font-family: system-ui, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      header {
-        padding: 3rem 1rem 2rem;
-        text-align: center;
-      }
-
-      h1 {
-        font-size: clamp(2.2rem, 5vw, 3.2rem);
-        font-weight: 800;
-        background: linear-gradient(
-          90deg,
-          var(--accent1),
-          var(--accent2),
-          var(--accent3)
-        );
-        background-size: 300% 100%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        animation: gradient-move 8s linear infinite;
-      }
-
-      @keyframes gradient-move {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      main {
-        flex: 1;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem 1.5rem 3rem;
-      }
-
-      .projects {
-        display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        padding-top: 1rem;
-      }
-
-      .card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 1rem;
-        background: linear-gradient(135deg, #818cf8, #f472b6);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .preview {
-        height: 160px;
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.95);
-      }
-
-      .card-content {
-        padding: 1.2rem 1rem;
-        background: white;
-        text-align: center;
-      }
-
-      .card-content h2 {
-        margin: 0;
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--accent1);
-      }
-
-      .card-content p {
-        margin-top: 0.4rem;
-        font-size: 0.9rem;
-        color: #475569;
-      }
-
-      footer {
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-        color: #64748b;
-      }
-
-      a.card-link {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-      }
-    </style>
+    <title>Neduri Raju | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
+    <!-- Header & Navigation -->
     <header>
-      <h1>My React Projects</h1>
-      <p style="color: #475569; margin-top: 0.5rem">
-        Small React apps by Raju Neduri – click any project for a live preview.
-      </p>
+      <nav>
+        <a href="#" class="logo">Neduri Raju</a>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <section class="projects">
-        <!-- Project 1 -->
-        <a
-          href="https://raju-neduri.github.io/ReactJs_Projects/01_Gradient_Generator/gradient-generator/"
-          class="card-link"
-          target="_blank"
-        >
-          <div class="card">
-            <div
-              class="preview"
-              style="
-                background-image: linear-gradient(135deg, #818cf8, #f472b6);
-              "
-            ></div>
-            <div class="card-content">
-              <h2>01 Gradient Generator</h2>
-              <p>Create beautiful CSS gradients + copy with one click ✨</p>
-            </div>
-          </div>
-        </a>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="highlight">Neduri Raju</span>.</h1>
+          <p>
+            A creative Frontend Developer building modern and responsive web
+            applications.
+          </p>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
+      </section>
 
-        <!-- Add more projects here -->
-        <a href="#" class="card-link" title="Coming Soon 👀">
-          <div class="card">
-            <div
-              class="preview"
-              style="
-                background-image: linear-gradient(135deg, #34d399, #3b82f6);
-              "
-            ></div>
-            <div class="card-content">
-              <h2>02 Next Project</h2>
-              <p>Placeholder – more React magic coming soon!</p>
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <h2>My Recent <span class="highlight">Projects</span></h2>
+        <div class="project-grid">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <img
+              src="./Images/01-gradient-generator.png"
+              alt="Project 1 Screenshot"
+            />
+            <h3>Gradient Generator</h3>
+            <p>
+              An interactive React tool to visually create, preview, and
+              instantly copy CSS gradient code.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://raju-neduri.github.io/ReactJs_Projects/01_Gradient_Generator/gradient-generator/"
+                target="_blank"
+                class="btn"
+                >Live Demo <i class="fas fa-external-link-alt"></i
+              ></a>
+              <a
+                href="https://github.com/Raju-Neduri/ReactJs_Projects/tree/main/01%20Gradient%20Generator/gradient-generator"
+                target="_blank"
+                class="btn-secondary"
+                >View Code <i class="fab fa-github"></i
+              ></a>
             </div>
           </div>
-        </a>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <img
+              src="./Images/02-Avatar-generator.png"
+              alt="Project 2 Screenshot"
+            />
+            <h3>Avatar Generator</h3>
+            <p>
+              A simple React utility to instantly generate unique, colorful
+              avatars from any text input.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://raju-neduri.github.io/ReactJs_Projects/02-avatar-generator/"
+                target="_blank"
+                class="btn"
+                >Live Demo <i class="fas fa-external-link-alt"></i
+              ></a>
+              <a
+                href="https://github.com/Raju-Neduri/ReactJs_Projects/tree/main/02-avatar-generator"
+                target="_blank"
+                class="btn-secondary"
+                >View Code <i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+
+          <div class="project-card">
+            <img src="images/project2.jpg" alt="Project 2 Screenshot" />
+            <h3>Another Cool Project</h3>
+            <p>
+              This project solves a real-world problem using React Hooks and
+              Context API for state management.
+            </p>
+            <div class="project-links">
+              <a href="YOUR_DEPLOYMENT_LINK_HERE" target="_blank" class="btn"
+                >Live Demo <i class="fas fa-external-link-alt"></i
+              ></a>
+              <a
+                href="YOUR_GITHUB_REPO_LINK_HERE"
+                target="_blank"
+                class="btn-secondary"
+                >View Code <i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Add more project cards here -->
+        </div>
+      </section>
+
+      <!-- About Me Section (Optional but Recommended) -->
+      <section id="about" class="about">
+        <h2>About <span class="highlight">Me</span></h2>
+        <p>
+          I am passionate about crafting beautiful user interfaces and bringing
+          ideas to life with code. When I'm not building React apps, you can
+          find me exploring new technologies or contributing to open source.
+        </p>
       </section>
     </main>
 
-    <footer>© 2025 Raju Neduri · Built with React & Love 💙</footer>
+    <!-- Footer -->
+    <footer id="contact">
+      <h3>Get In Touch</h3>
+      <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+      <p class="email">rajneduri123@gmail.com</p>
+      <div class="social-links">
+        <a href="https://github.com/Raju-Neduri" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/neduri-raju/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="YOUR_TWITTER_PROFILE_LINK" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <p class="copyright">&copy; 2025 Neduri Raju. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
