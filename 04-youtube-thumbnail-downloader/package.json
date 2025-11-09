@@ -1,5 +1,4 @@
 {
-  "homepage": "https://raju-neduri.github.io/ReactJs_Projects/04-youtube-thumbnail-downloader/",
   "name": "04-youtube-thumbnail-downloader",
   "private": true,
   "version": "0.0.0",
@@ -8,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist -b gh-pages --dest 04-youtube-thumbnail-downloader"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
