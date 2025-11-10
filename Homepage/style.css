@@ -291,4 +291,22 @@ footer .email {
   .hero-text h1 {
     font-size: 2.5rem;
   }
+
+  .btn {
+    margin: 10px;
+  }
+
+  /* Ensure project action buttons wrap and remain visible on small screens */
+  .project-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap; /* allow buttons to flow to next line instead of overflowing */
+    justify-content: center; /* center buttons for better small-screen layout */
+  }
+
+  /* Prevent button text/icons from breaking inside the button */
+  .project-links .btn,
+  .project-links .btn-secondary {
+    white-space: nowrap;
+  }
 }
